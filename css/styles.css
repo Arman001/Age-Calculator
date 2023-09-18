@@ -1,0 +1,235 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap");
+
+:root {
+  /* ___COLORS____  */
+
+  /* Primary */
+  --PURPLE: hsl(259, 100%, 65%);
+  --LIGHT-RED: hsl(0, 100%, 67%);
+
+  /* Neutral */
+  --WHITE: hsl(0, 0%, 100%);
+  --OFF-WHITE: hsl(0, 0%, 94%);
+  --LIGHT-GREY: hsl(0, 0%, 86%);
+  --SMOKEY-GREY: hsl(0, 1%, 44%);
+  --OFF-BLACK: hsl(0, 0%, 8%);
+
+  /* ____FONTS____ */
+  --FF: "Poppins", sans-serif;
+  --FW-ITALIC-LIGHT: 400;
+  --FW-ITALIC-HEAVY: 800;
+  --FW-BOLD: 700;
+  --FS: 32px;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-weight: var(--FW-ITALIC-LIGHT);
+  font-family: var(--FF);
+  background-color: var(--OFF-WHITE);
+}
+
+.age-calculator {
+  background-color: var(--WHITE);
+  max-width: 400px;
+  padding: 1.5rem;
+  border-radius: 30px 30px 100px;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  margin: 2rem;
+}
+
+.age__inputs {
+  display: flex;
+  gap: 1rem;
+}
+
+.age__input {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.age__label {
+  color: var(--SMOKEY-GREY);
+  font-weight: var(--FW-ITALIC-HEAVY);
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 3px;
+}
+
+.age__edit {
+  width: 90px;
+  height: 50px;
+  border-radius: 8px;
+  border: 1px solid var(--LIGHT-GREY);
+  color: var(--OFF-BLACK);
+  padding: 0.7rem;
+  font-size: 21px;
+  font-weight: var(--FW-ITALIC-HEAVY);
+}
+
+.age__edit:hover {
+  cursor: pointer;
+  border-color: var(--PURPLE);
+}
+
+.age__edit:focus {
+  color: var(--OFF-BLACK);
+  border-radius: 8px;
+  border: 1px solid var(--PURPLE);
+}
+
+.age__submit {
+  position: relative;
+  margin-top: 3rem;
+  margin-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.age__seprator {
+  content: "";
+  display: block;
+  border-top: 1px solid var(--LIGHT-GREY);
+  width: 100%;
+}
+
+.age__submit button {
+  border-radius: 50%;
+  border: none;
+  background-color: var(--PURPLE);
+  padding: 1rem;
+  aspect-ratio: 1/1;
+  position: absolute;
+  top: -30px;
+  cursor: pointer;
+}
+
+.age__submit button img {
+  height: 25px;
+  width: 30px;
+}
+
+.age__submit button:hover {
+  background-color: var(--OFF-BLACK);
+}
+
+.age__submit button:active{
+  background-color: var(--PURPLE);
+
+}
+
+/* .age__display{
+  display: flex;
+  flex-direction: column;
+  gap: -3rem;
+  
+} */
+
+.age__item {
+  font-size: 50px;
+  font-weight: var(--FW-ITALIC-HEAVY);
+  font-style: italic;
+  font-weight: 1000;
+  line-height: 1.1;
+  
+}
+
+.age__date--purple {
+  color: var(--PURPLE);
+}
+
+.age-calc--error {
+  margin-top: -0.3rem;
+  font-size: 9px;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--LIGHT-RED);
+}
+
+.age__label--error {
+  color: var(--LIGHT-RED);
+}
+
+.age__edit--error {
+  border-color: var(--LIGHT-RED);
+}
+
+/* __LARGER SCREENS___ */
+
+@media (min-width: 800px) {
+  .age-calculator {
+    max-width: 800px;
+    padding: 3rem;
+    border-bottom-right-radius: 30%;
+  }
+
+  .age__inputs {
+    padding-right: 10rem;
+  }
+
+  .age__edit {
+    width: 160px;
+    height: 70px;
+    font-size: 30px;
+    padding-left: 1.5rem;
+  }
+
+  .age__label {
+    font-size: 15px;
+  }
+
+  .age-calc--error{
+    font-size: 13px;
+    font-weight: var(--FW-ITALIC-LIGHT);
+  }
+
+  .age__submit {
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  .age__seprator {
+    border-top: 2px solid var(--LIGHT-GREY);
+  }
+
+  .age__submit button {
+    padding: 1.2rem;
+    top: -40px;
+  }
+
+  .age__submit button img {
+    height: 40px;
+    width: 50px;
+  }
+
+  .age__item{
+    font-size: 95px;
+  }
+
+  
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 2rem;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
